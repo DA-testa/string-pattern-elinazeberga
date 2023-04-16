@@ -8,10 +8,11 @@ def read_input():
         text = input().strip()
         pattern = input().strip()
     elif "F" in choice:
-        with open("./tests/06", "r") as file:
-            text1 = file.readline()
-            text = text1[1].rstrip()
-            pattern = text1[0].rstrip() 
+        nameNum = "06"
+        if "a" not in nameNum:
+            with open("./tests/{nameNum}", "r") as file:
+                text = file.readline().rstrip()
+                pattern = file.readline().rstrip() 
             #nameNum = "tests/" + nameNum
 
     
