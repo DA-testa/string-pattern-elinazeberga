@@ -5,12 +5,12 @@ def read_input():
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     choice = input()
     if "I" in choice:
-        text = input().strip()
-        pattern = input().strip()
+        text = input().rstrip()
+        pattern = input().rstrip()
     elif "F" in choice:
         nameNum = "06"
         if "a" not in nameNum:
-            with open(f"./tests/{nameNum}") as file:
+            with open(f"tests/{nameNum}") as file:
                 text1 = file.read().split("\n")
                 pattern = text1[0].rstrip() 
                 text = text1[1].rstrip()
