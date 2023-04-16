@@ -4,11 +4,11 @@ def read_input():
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     choice = input()
-    if "I" in choice:
+    if "I" in choice[:1]:
         text = input().rstrip()
         pattern = input().rstrip()
     elif "F" in choice:
-        with open("tests/06", "r") as file:
+        with open("./tests/06", "r") as file:
             text = file.readline().rstrip()
             pattern = file.readline().rstrip()
             #nameNum = "tests/" + nameNum
