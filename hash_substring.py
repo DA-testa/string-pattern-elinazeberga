@@ -11,9 +11,9 @@ def read_input():
         nameNum = "06"
         if "a" not in nameNum:
             with open(f"./tests/{nameNum}") as file:
-                text1 = file.read().split("/n")
-                text = text1[1].rstrip()
+                text1 = file.read().split("\n")
                 pattern = text1[0].rstrip() 
+                text = text1[1].rstrip()
             #nameNum = "tests/" + nameNum
 
     
