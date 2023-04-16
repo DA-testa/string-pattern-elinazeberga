@@ -8,12 +8,9 @@ def read_input():
         text = input().rstrip()
         pattern = input().rstrip()
     elif "F" in choice:
-        nameNum = "06"
-        if "a" not in nameNum:
-            with open(f"tests/{nameNum}") as file:
-                text1 = file.read().split("\n")
-                pattern = text1[0].rstrip() 
-                text = text1[1].rstrip()
+        with open("tests/06", "r") as file:
+            text = file.readline().rstrip()
+            pattern = file.readline().rstrip()
             #nameNum = "tests/" + nameNum
 
     
@@ -37,7 +34,7 @@ def get_occurrences(pattern, text):
     text_len = len(text)
     for i in range(text_len - pattern_len + 1):
         text1 = text[i:i + pattern_len]
-        if hash(pattern) == hash(text1):
+        if hash(text1) == hash(pattern):
             occurances.append(i)
 
     # this function should find the occurances using Rabin Karp alghoritm 
