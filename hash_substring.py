@@ -10,7 +10,7 @@ def read_input():
     elif "F" in choice:
         nameNum = "06"
         if "a" not in nameNum:
-            with open("./tests/{nameNum}") as file:
+            with open(f"./tests/{nameNum}") as file:
                 text1 = file.read().split("/n")
                 text = text1[1].rstrip()
                 pattern = text1[0].rstrip() 
