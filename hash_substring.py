@@ -5,8 +5,8 @@ def read_input():
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     choice = input()
     if "I" in choice[:1]:
-        pattern = input().rstrip()
         text = input().rstrip()
+        pattern = input().rstrip()
         
     elif "F" in choice:
         with open("./tests/06", "r") as file:
